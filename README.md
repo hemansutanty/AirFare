@@ -1,6 +1,6 @@
 #AirFare
 
-This is simple Flight Ticket Management system which is built based on Java RMI. 
+A simple Flight ticket Management system built using Java Remote Method Invocation concept where there is a server which is handling all the transactions and database management while the client systems are used to call the functions of the server.. 
 The GUI is built using Java Swing.
 
 
