@@ -10,17 +10,17 @@ class Customer extends JFrame implements ActionListener,ItemListener
 	JRadioButton r1,r2;
 	ButtonGroup r3;
 	JButton b1;
-	String aa[]={"","1","2","3","4","5"},passname,passadd,passgen,sb;
+	String aa[]={"","1","2","3","4","5"},passname,passadd,passgen,sb,flight_no;
 	int seatbook,passage,tno;
 	Container cn;
 	Airlines obj;
 	
-	Customer()
+	Customer(String flightno)
 	{
 		setTitle("customer detail entry");
 		cn=getContentPane();
 		cn.setLayout(null);
-		
+		flight_no = flightno;
 		sr=new JLabel("Seats Required:");sr.setBounds(10,10,150,30);cn.add(sr);
 		m1=new JComboBox(aa);m1.setBounds(110,10,100,30);cn.add(m1);
 		m1.addActionListener(this);
@@ -65,9 +65,9 @@ class Customer extends JFrame implements ActionListener,ItemListener
 	public void itemStateChanged(ItemEvent ie) {
                                              
 		if(ie.getSource() == r1) 
-                        		{passgen = "Male";  }
+        {passgen = "Male";  }
 		if(ie.getSource() == r2) 
-                        		{passgen = "Female";    }
+        {passgen = "Female";    }
 	}
 
 	public void actionPerformed(ActionEvent ae)
@@ -81,16 +81,7 @@ class Customer extends JFrame implements ActionListener,ItemListener
 				passadd = addr1.getText();
 				sb = (String)m1.getSelectedItem();
 				seatbook = Integer.parseInt(sb);
-				System.out.println(passname);
-				System.out.println(passage);
-				System.out.println(passadd);
-				System.out.println(seatbook);
-				tno=obj.passengerDetails(passname,passage,passadd ,passgen,seatbook);
-				//System.out.println(passname);
-				//System.out.println(passage);
-				//System.out.println(passadd);
-				//System.out.println(seatbook);
-
+				tno=obj.passengerDetails(flight_no,passname,passage,passadd ,passgen,seatbook);
 				setVisible(false);
 				new PaymentOptions(tno);
 			} catch(Exception e) {System.out.println(e);}
@@ -99,10 +90,10 @@ class Customer extends JFrame implements ActionListener,ItemListener
 		
 	}
 
-	public static void main(String ar[])
+	/*public static void main(String ar[])
 	{
 		new Customer();
-	}
+	}*/
 }
 
 	

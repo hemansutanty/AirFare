@@ -114,7 +114,7 @@ class CheckSeats extends JFrame implements ActionListener
 		if(ae.getSource()==next)
 		{
 			setVisible(false);
-			new Customer();
+			new Customer(fno);
 		}		
 	
 	}

@@ -98,7 +98,7 @@ class PaymentOptions extends JFrame implements ActionListener,ItemListener
 				new Passengerdetails(ticno);		
 			} 
 			catch(Exception e) 
-				{System.out.println(e);}
+			{System.out.println(e);}
 					
 		}
 	}

@@ -21,7 +21,7 @@ class AirlinesMain extends UnicastRemoteObject implements Airlines
 			/*Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
 			con=DriverManager.getConnection("jdbc:odbc:airlinepro","system","uctc");*/
 			st=con.createStatement();
-			System.out.println("After DB connetion");
+			System.out.println("Connected to Database");
 		}catch(Exception ob){
 			ob.printStackTrace();
 		}
@@ -29,7 +29,6 @@ class AirlinesMain extends UnicastRemoteObject implements Airlines
 	public String flightno(String src,String des)
 	{
 		ss=src;	dd=des;
-		System.out.println("Hello Flightno");
 		try
 		{
 		qry="SELECT * FROM flight  where SOURCE='"+ss+"' and DESTINATION='"+dd+"' ";
@@ -59,9 +58,9 @@ class AirlinesMain extends UnicastRemoteObject implements Airlines
 		{System.out.println(aa);}		
 			return no_of_seats;
 	}
-	public int passengerDetails(String p_name,int p_age,String p_add,String p_gender,int seats_booked)
+	public int passengerDetails(String flight_no,String p_name,int p_age,String p_add,String p_gender,int seats_booked)
 	{
-		System.out.println("Working");
+		String seatsnumber="";
 		try
 		{
 			qry2="SELECT MAX(TICKETNO) FROM passenger";
@@ -73,6 +72,16 @@ class AirlinesMain extends UnicastRemoteObject implements Airlines
 			{maxt=5000;}
 			maxt++;
 			qry="INSERT INTO passenger values('"+p_name+"',"+p_age+",'"+p_add+"','"+p_gender+"',"+seats_booked+","+maxt+")";
+			st.executeUpdate(qry);
+			qry="SELECT NOOFSEATS FROM flight where flightno='"+flight_no+"'";
+			rs=st.executeQuery(qry);
+			if(rs.next())
+			{
+				seatsnumber=rs.getString(1);
+			}
+			int seatsleft = Integer.parseInt(seatsnumber)-seats_booked;
+			String seatsleftString = String.valueOf(seatsleft);
+			qry="UPDATE flight set NOOFSEATS='"+seatsleftString+"' where FLIGHTNO='"+flight_no+"'";
 			st.executeUpdate(qry);
 		}
 		catch(SQLException abd)
@@ -125,8 +134,7 @@ class AirlinesMain extends UnicastRemoteObject implements Airlines
 				full[5]=rs.getString("PASSENGERAGE");
 				full[6]=rs.getString("PASSENGERGENDER");
 				full[7]=rs.getString("SEATSBOOKED");
-				full[8]=rs.getString("TICKETNO");
-				
+				full[8]=rs.getString("TICKETNO");	
 			}
 		}
 		catch(SQLException aa)

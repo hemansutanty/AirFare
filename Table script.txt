@@ -1,0 +1,12 @@
+create table flight(source varchar(30),destination varchar(30),flightno varchar(5) primary key,noofseats int,flightname varchar(30));
+
+create table passenger(passengername varchar(50),passengerage varchar(3),passengeraddress varchar(100),passengergender varchar(10),seatsbooked varchar(10),ticketno varchar(10) primary key);
+
+create table payment(ticketno int,amount int,mode varchar(10),cardno varchar(16));
+
+insert into flight(source,destination,flightno,noofseats) values('Paris','London',1001,20,'P-L Jet');
+insert into flight(source,destination,flightno,noofseats) values('London','Paris',1002,30,'L-P Jet');
+insert into flight(source,destination,flightno,noofseats) values('New York','London',1003,25,'N-L Jet');
+insert into flight(source,destination,flightno,noofseats) values('London','New York',1004,13,'L-N Jet');
+insert into flight(source,destination,flightno,noofseats) values('New York','Paris',1005,55,'N-P Jet');
+insert into flight(source,destination,flightno,noofseats) values('Paris','New York',1006,27,'P-N Jet');
