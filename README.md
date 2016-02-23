@@ -1,4 +1,4 @@
-#AirFare
+#AirFarehttps://www.linkedin.com/in/monica-tripathy-53867477?authType=name&authToken=RKl5&trk=prof-proj-cc-name
 
 This is simple Flight Ticket Management system which is built based on Java RMI. 
 The GUI is built using Java Swing.
@@ -16,3 +16,7 @@ The GUI is built using Java Swing.
 8. Navigate inside the client folder and open a command prompt there.(Shift+Right Click).
 9. Type java Welcome.
 10. Follow the steps accordingly on the Interface to book tickets.
+
+####Initial Collaborators
+[Abhishek Jyotishi](https://www.linkedin.com/in/abhishek-jyotishi-a1b10b97?authType=name&authToken=bav3&trk=prof-proj-cc-name)
+[Monica Tripathy](https://www.linkedin.com/in/monica-tripathy-53867477?authType=name&authToken=RKl5&trk=prof-proj-cc-name)
