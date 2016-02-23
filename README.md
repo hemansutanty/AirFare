@@ -1,4 +1,4 @@
-#AirFarehttps://www.linkedin.com/in/monica-tripathy-53867477?authType=name&authToken=RKl5&trk=prof-proj-cc-name
+#AirFare
 
 This is simple Flight Ticket Management system which is built based on Java RMI. 
 The GUI is built using Java Swing.
