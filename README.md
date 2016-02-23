@@ -1,6 +1,6 @@
 #AirFare
 
-A simple Flight ticket Management system built using Java Remote Method Invocation concept where there is a server which is handling all the transactions and database management while the client systems are used to call the functions of the server.. 
+A simple Flight ticket Management system built using Java Remote Method Invocation concept where there is a server which is handling all the transactions and database management while the client systems are used to call the functions of the server. 
 The GUI is built using Java Swing.
 
 
@@ -18,5 +18,7 @@ The GUI is built using Java Swing.
 10. Follow the steps accordingly on the Interface to book tickets.
 
 ####Initial Collaborators
+
 [Abhishek Jyotishi](https://www.linkedin.com/in/abhishek-jyotishi-a1b10b97?authType=name&authToken=bav3&trk=prof-proj-cc-name)
+
 [Monica Tripathy](https://www.linkedin.com/in/monica-tripathy-53867477?authType=name&authToken=RKl5&trk=prof-proj-cc-name)
