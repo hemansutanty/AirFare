@@ -1,10 +1,10 @@
-#AirFare
+# AirFare
 
 A simple Flight ticket Management system built using Java Remote Method Invocation concept where there is a server which is handling all the transactions and database management while the client systems are used to call the functions of the server. 
 The GUI is built using Java Swing.
 
 
-###Steps to Execute the AirFare App(Windows)
+### Steps to Execute the AirFare App(Windows)
 
 1. Download Postgres Sql database.Keep Default configurations and set password as password.(database-postgres,user-postgres,port-5432,password-password)
 2. Run the Create table scripts on the postgres shell. Run the Insert Statement scripts on Postgres shell.
@@ -17,13 +17,13 @@ The GUI is built using Java Swing.
 9. Type java Welcome.
 10. Follow the steps accordingly on the Interface to book tickets.
 
-####Initial Collaborators
+#### Initial Collaborators
 
 [Abhishek Jyotishi](https://www.linkedin.com/in/abhishek-jyotishi-a1b10b97?authType=name&authToken=bav3&trk=prof-proj-cc-name)
 
 [Monica Tripathy](https://www.linkedin.com/in/monica-tripathy-53867477?authType=name&authToken=RKl5&trk=prof-proj-cc-name)
 
-###The MIT License (MIT)
+### The MIT License (MIT)
 
 Copyright (c) 2016 Hemansu Kumar Tanty
 
